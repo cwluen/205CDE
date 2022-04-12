@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Book Shop</title>
+	<!-- Link to CSS file -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css')}}">
+</head>
+
+<!-- header section starts -->
+
+<header class="header">
+	<div class="TOPhead">
+		<a href="{{url_for('index')}}" class="logo">
+			<i class="bx bxs-book" id="book">
+				<link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
+			</i>
+			BookShop
+		</a>
+		<form action="" class="searchbox">
+			<input type="search" name="" placeholder="search here...">
+			<label for="search-box">
+				<i class="bx bx-search"></i>
+			</label>
+		</form>
+		<div class="cart-icon">
+			<a href="{{url_for('login')}}">
+				<div class="loginbtn">
+					<i class="bx bx-user" id="user-icon"></i>
+				</div>
+			</a>
+		</div>
+	</div>
+	<div class="Secondhead">
+		<nav class="navbar">
+			<a href="{{url_for('index')}}">home</a>
+			<a href="{{url_for('product')}}">stock</a>
+		</nav>
+	</div>
+</header>
+<body>
+<section class="book-series">
+
+		<h1 class="heading"><span>Books List</span></h1>
+		<!-- content -->
+		<div class="slider">
+  			
+  			<div class="slide">
+				
+				<!-- box 1 -->
+				<div id="product-box">
+					<div class="Boximg">
+						<img src="{{ url_for('static', filename='/img/Harry1.jpg')}}" class="productIMG">
+					</div>
+					<div class="content">	
+						<h2 class="product_title">Harry Potter and the Sorcerer's Stone</h2>
+						<span class="price">$208</span>
+					</div>
+				</div>
+				<!-- box 2 -->
+				<div id="product-box">
+					<div class="Boximg">
+						<img src="{{ url_for('static', filename='/img/Harry2.jpg')}}" class="productIMG">
+					</div>
+					<div class="content">		
+						<h2 class="product_title">Harry Potter and the Chamber of Secrets</h2>
+						<span class="price">$208</span>
+					</div>
+				</div>
+				<!-- box 3 -->
+				<div id="product-box">
+					<div class="Boximg">
+						<img src="{{ url_for('static', filename='/img/Harry3.jpg')}}" class="productIMG">
+					</div>
+					<div class="content">	
+						<h2 class="product_title">Harry Potter and the Prisoner of Azkaban</h2>
+						<span class="price">$208</span>
+					</div>
+				</div>
+				<!-- box 4 -->
+				<div id="product-box">
+					<div class="Boximg">
+						<img src="{{ url_for('static', filename='/img/Harry4.jpg')}}" class="productIMG">
+					</div>
+					<div class="content">	
+						<h2 class="product_title">Harry Potter and the Goblet of Fire</h2>
+						<span class="price">$240</span>
+					</div>
+				</div>
+				<!-- box 5 -->
+				<div id="product-box">
+					<div class="Boximg">
+						<img src="{{ url_for('static', filename='/img/Harry5.jpg')}}" class="productIMG">
+					</div>
+					<div class="content">	
+						<h2 class="product_title">Harry Potter and the Order of the Phoenix</h2>
+						<span class="price">$240</span>
+					</div>
+				</div>
+				<!-- box 6 -->
+				<div id="product-box">
+					<div class="Boximg">
+						<img src="{{ url_for('static', filename='/img/Harry6.jpg')}}" class="productIMG">
+					</div>
+					<div class="content">	
+						<h2 class="product_title">Harry Potter and the Half-Blood Prince</h2>
+						<span class="price">$240</span>
+					</div>
+				</div>
+				<!-- box 7 -->
+				<div id="product-box">
+					<div class="Boximg">
+						<img src="{{ url_for('static', filename='/img/Harry7.jpg')}}" class="productIMG">
+					</div>
+					<div class="content">	
+						<h2 class="product_title">Harry Potter & The Deathly Hallows</h2>
+						<span class="price">$350</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="book-series">
+		
+		<div class="slider">
+  			
+  			<div class="slide">
+  				<!-- box 8 -->
+				<div id="product-box">
+					<div class="Boximg">
+						<img src="{{ url_for('static', filename='/img/anime_IMG1.jpg')}}" class="productIMG">
+					</div>
+					<div class="content">	
+						<h2 class="product_title">歡迎來到實力至上主義的教室 (7.5)</h2>
+						<span class="price">$65</span>
+					</div>
+				</div>
+				<!-- box 9 -->
+				<div id="product-box">
+					<div class="Boximg">
+						<img src="{{ url_for('static', filename='/img/anime_IMG2.jpg')}}" class="productIMG">
+					</div>
+					<div class="content">	
+						<h2 class="product_title">鬼滅之刃 (22)</h2>
+						<span class="price">$30</span>
+					</div>
+				</div>
+				<!-- box 10 -->
+				<div id="product-box">
+					<div class="Boximg">
+						<img src="{{ url_for('static', filename='/img/anime_IMG3.jpg')}}" class="productIMG">
+					</div>
+					<div class="content">	
+						<h2 class="product_title">進擊的巨人#17</h2>
+						<span class="price">$33</span>
+					</div>
+				</div>
+
+			</div>
+		</div>
+</section>
+	<!-- Link to JS -->
+	<script src="{{url_for('static', filename='/js/app.js')}}" type="text/javascript"></script>
+</body>
+</html>

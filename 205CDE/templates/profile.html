@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Book Shop</title>
+	<!-- Link to CSS file -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css')}}">
+</head>
+<!-- header section starts -->
+
+<header class="header">
+	<div class="TOPhead">
+		<a href="{{url_for('index')}}" class="logo">
+			<i class="bx bxs-book" id="book">
+				<link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
+			</i>
+			BookShop
+		</a>
+		<form action="" class="searchbox">
+			<input type="search" name="" placeholder="search here...">
+			<label for="search-box">
+				<i class="bx bx-search"></i>
+			</label>
+		</form>
+		<div class="cart-icon">
+			<div class="cart-icon">
+			<a href="/login">
+				<div class="loginbtn">
+					<i class="bx bx-user" id="user-icon"></i>
+				</div>
+			</a>
+			</div>
+			<a href="{{ url_for('logout')}}">
+				<div class="logoutbtn">
+					<i class="bx bx-log-out "></i>
+				</div>
+			</a>
+		</div>
+	</div>
+	<div class="Secondhead">
+		<nav class="navbar">
+			<a href="{{url_for('index')}}">home</a>
+			<a href="{{url_for('product')}}">stock</a>
+		</nav>
+	</div>
+</header>
+<body>
+<p class="welcome">Welcome back, {{ account['username'] }}!</p>
+<h2 class="ProfileHeading">Profile Page</h2>
+<div class="profileBox">
+    <p>Your account details are below:</p>
+    <table class="profile">
+        <tr>
+            <td>Username:</td>
+            <td>{{ account['username'] }}</td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td>{{ account['password'] }}</td>
+        </tr>
+        <tr>
+        	<td>Phone Number:</td>
+        	<td>{{ account['phoneNo'] }}</td>
+        </tr>
+        <tr>
+        	<td>Email:</td>
+        	<td>{{ account['email'] }}</td>
+        </tr>
+        <tr>
+        	<td>
+        		<form action="{{url_for('delete')}}">
+        		<input class="delete" type="submit" value="delete">
+        		</form>
+        	</td>
+        </tr>
+    </table>
+    	<div class="profile">
+		<form action="{{url_for('update')}}" method="POST">
+			<div class="login">
+				<p><b>Profile Update</b></p>
+				<label for="phoneNo"><b>Phone No</b></label>
+				<input type="text" placeholder="{{ account['phoneNo']}}" name="phoneNo" id="" required>
+				<label for="email"><b>Email</b></label>
+				<input type="text" placeholder="{{account['email']}}" name="email" id="" required>
+				<input type="submit" class="update" value="update">
+		</form>
+	</div>
+    </a>
+</div>
+	<!-- Link to JS -->
+	<script src="{{url_for('static', filename='/js/app.js')}}" type="text/javascript"></script>
+</body>
+</html>

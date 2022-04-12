@@ -1,0 +1,369 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-padding-top: 5rem;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --main-color:  #fd4646;
+  --text-color:  #171427;
+  --bg-color:  #fff;
+  --black: #444;
+  --border: 0.1rem solid rgba(0,0,0,.1);
+  --border-hover: 0.1rem solid var(--black);
+  --box-shadow: 0 0.5rem 1rem rgba(0,0,0,.1);
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5rem;
+    scroll-behavior: smooth;
+}
+
+header {
+  margin: 0;
+  border-bottom: 1px solid #EBECFD;
+}
+
+
+.TOPhead {
+  background: #fff;
+  padding: 1.5rem 9%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: bolder;
+  color: var(--black);
+}
+
+
+.searchbox {
+  width: 50rem;
+  height: 5rem;
+  border: var(--border);
+  overflow: hidden;
+  background: #fff;
+  display: flex;
+  border-radius: 0.5rem;
+
+}
+
+.searchbox input {
+  font-size: 1.6rem;
+  padding: 0 1.2rem;
+  height: 100%;
+  width: 100%;
+  text-transform: none;
+  color: var(--black);
+  border: none;
+}
+
+.searchbox label {
+  font-size: 2.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1rem;
+  color: var(--black);
+  cursor: pointer;
+}
+
+.searchbox label:hover{
+  color: var(--black);
+}
+
+
+.loginbtn {
+  font-size: 2.5rem;
+  margin: 1.5rem;
+  color: var(--black);
+  cursor: pointer;
+  display: flex;
+}
+
+.logoutbtn {
+  font-size: 2.5rem;
+  margin: 1.5rem;
+  color: var(--black);
+  cursor: pointer;
+  display: flex;
+}
+
+.Secondhead {
+    background-color: var(--black);
+}
+
+.navbar{
+    text-align: center;
+}
+
+.navbar a{
+    color:#fff;
+    display: inline-block;
+    padding:1.2rem;
+    font-size: 1.7rem;
+}
+
+.navbar a:hover{
+    background: var(--main-color);
+}
+
+/* Intro */
+.Intro {
+  height: 5rem;
+  width: 100%;
+  padding-top: 0;
+  text-align: center;
+  font-size: 30px;
+}
+
+.banner {
+  height: 25rem;
+  width: 100%;
+}
+
+.IntroArea {
+  padding-right: 5rem;
+  padding-left: 5rem;
+  height: 30rem;
+  background-color: #f5f5dc;
+}
+
+/* featured book */
+.book-series {
+  padding-top: 2rem;
+}
+
+.heading{
+  padding-top: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.heading::before{
+    content: '';
+    position: absolute;
+    top:50%; left:0;
+    transform: translateY(-50%);
+    width: 100%;
+    height:.01rem;
+    background: rgba(0,0,0,.1);
+    z-index: -1;
+}
+
+.heading span{
+    font-size: 3rem;
+    padding:.5rem 2rem;
+    color:var(--black);
+    background: #fff;
+    border:var(--border);
+}
+
+#product-box{
+    margin:2rem 0;
+    position: relative;
+    overflow: hidden;
+    border:var(--border);
+    text-align: center;
+    width: 25rem;
+}
+
+#product-box:hover{
+    border:var(--border-hover);
+}
+
+.product_title{
+  font-size: 2rem;
+}
+
+.price{
+  font-size: 2rem;
+}
+
+.Boximg img{
+    padding:1rem;
+    height: 25rem;
+    background: linear-gradient(15deg, #eee 30%, #fff 30.1%);
+}
+
+/* book slider */
+.slider {
+  width: 100%;
+  height: 40rem;
+  position: relative;
+  margin: auto;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.slide {
+  display: flex;
+  position: absolute;
+  left: 0;
+  transition: 0.3s left ease-in-out;
+}
+
+
+/* slider */
+.mySlides {
+  display:none;
+}
+
+.SlideShow {
+  height: 25rem;
+}
+
+
+/* login Page */
+.login_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:relative;
+    height:100%;
+    width:100%;
+    padding-top: 5rem;
+}
+
+.login_container form {
+    background:#fff;
+    border:var(--border);
+    width: 50rem;
+    height: 45rem;
+    padding:2rem;
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    margin:2rem;
+    
+}
+
+.login_container form.checkbox {
+    display:flex;
+    align-items: center;
+    gap:.5rem;
+    padding:1rem 0;
+}
+
+.login_container form .checkbox label{
+    font-size: 1.5rem;
+    color:var(--light-color);
+    cursor: pointer;
+}
+
+.login_container form p{
+    font-size: 3rem;
+    padding-bottom: 0.2rem;
+}
+
+.regbtn {
+  font-size: 1.5rem;
+}
+
+.login_container form p a{
+    color:var(--green);
+    text-decoration: underline;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+span.password {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Extra styles for the loginSubmit button */
+.loginSubmit{
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+  text-align: center;
+  width:100%;
+  margin:1.5rem 0;
+}
+
+.loginSubmit:hover,
+.loginSubmit:focus{
+  color: black;
+  cursor: pointer;
+}
+
+/* Register button */
+.registerbtn{
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+  text-align: center;
+  width:100%;
+  margin:1.5rem 0;
+}
+
+.registerbtn:hover,
+.registerbtn:focus{
+  color: black;
+  cursor: pointer;
+}
+
+/* Profile page*/
+.welcome {
+	font-size: 3rem;
+	text-align: center;
+}
+
+.ProfileHeading {
+	font-size: 2rem;
+}
+
+.profile {
+	padding: 5rem;
+	width: 100%;
+  border: var(--border);
+}
+
+.profileBox {
+  font-size: 1.5rem;
+  align-items: center;
+  padding: 2rem;
+}
+
+.update {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+  text-align: center;
+  width:10rem;
+  margin:1.5rem 0;
+}
+
+.update:hover,
+.update:focus{
+  color: black;
+  cursor: pointer;
+}
+
+.delete {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+  text-align: center;
+  width:10rem;
+  margin:1.5rem 0;
+}
